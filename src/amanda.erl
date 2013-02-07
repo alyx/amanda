@@ -1,6 +1,8 @@
 -module(amanda).
 -author("Alyx Wolcott <contact@alyxw.me>").
 -include("amqp_client.hrl").
+-compile([export_all]).
+-export([connect/2]).
 
 connect(Host, Port) ->
 	{ok, Channel, Queue} = start_amqp(),
